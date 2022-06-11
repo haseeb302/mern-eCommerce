@@ -3,6 +3,8 @@ import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import React from 'react'
 import styled from 'styled-components';
 
+import { mobile } from '../responsive';
+
 const Container = styled.div`
     height: 60px; 
 `;
@@ -33,6 +35,10 @@ const Right = styled.div`
 const Language = styled.span`
     font-size: 14px;
     cursor: pointer;
+    ${mobile({
+    display: "none"
+})}
+
 `;
 
 const SearchContainer = styled.div`
@@ -48,7 +54,9 @@ const Input = styled.input`
     &:focus {
         border: none;
     } 
-    
+    ${mobile({
+    width: "50px"
+})}    
 `;
 
 const Logo = styled.h1`
